@@ -9,8 +9,16 @@
 export default App; */
 import React,{Component} from 'react';
 import './App.css';
-class App extends Component{
+import Child from './Child'
+import ChildB from './ChildB'
+class App extends Component{    
   render(){
+    const info ={
+      name:"Abdullah",
+      age:32
+      }
+
+    const arr = ['red','blue','green']
     const mystyle={
       backgroundColor:"lightgreen"
     }
@@ -20,6 +28,8 @@ class App extends Component{
       <h1 style={{backgroundColor:"lightblue"}}>Hello World</h1>
       <h2 style={mystyle}>new website </h2>
       <h3 >new website </h3>
+      <Child personalInfo ={info} colors={arr} />
+      <ChildB manName={'fahad'} manAge={25}/>
     </div>
     )
   }

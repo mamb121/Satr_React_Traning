@@ -11,6 +11,13 @@ export default class Counter extends Component {
     componentDidMount(){
         window.setTimeout(this.handelClick,1000)
     }
+    componentDidUpdate(){
+      if (this.state.counter > 5){
+        this.setState({
+          counter: 0
+        })
+      }
+    }
     handelClick(){
         this.setState({
           counter:this.state.counter + 1

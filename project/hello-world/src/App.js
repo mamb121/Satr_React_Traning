@@ -46,8 +46,8 @@ class App extends Component{
         <h4>show Counter {this.state.showCounter?<div>on</div>:<div>off</div>}</h4>
         <button onClick={this.changeCounter()}>change Counter</button>
       </div>
-      <br></br>
-      <div style={{backgroundColor:'lightgray', paddingTop:'5px'}} >
+      <br></br>      
+      <div style={{background:'lightgray'}}>
         <Counter/>
       </div>
     </div>

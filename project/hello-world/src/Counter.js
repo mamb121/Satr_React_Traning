@@ -5,21 +5,21 @@ export default class Counter extends Component {
         super(props);
         this.handelClick=this.handelClick.bind(this);
         this.state = {
-            counterNumber:0
+            counter:0
         };
     }
-    componentDidCatch(){
+    componentDidMount(){
         window.setTimeout(this.handelClick,1000)
     }
     handelClick(){
         this.setState({
-            counterNumber:this.state.counterNumber + 1
+          counter:this.state.counter + 1
         })
         window.setTimeout(this.handelClick,1000)
     }
   render() {
     return (
-      <div>Counter :{this.state.counterNumber}</div>
+      <div>Counter :{this.state.counter}</div>
     )
   }
 }
